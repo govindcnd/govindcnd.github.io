@@ -1,456 +1,301 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-  
-  <meta charset="utf-8">
-  <meta content="width=device-width, initial-scale=1.0" name="viewport">
-
-  <title>GovindRaj Cloud Professional </title>
-  <meta content="" name="description">
-  <meta content="" name="keywords">
-
-  <!-- Favicons -->
-  <link href="assets/img/favicon.png" rel="icon">
-  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
-
-  <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css?family=Yellowtail:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
-
-  <!-- Vendor CSS Files -->
-  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
-  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
-  <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
-  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
-  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
-
-  <!-- Template Main CSS File -->
-  <link href="assets/css/style.css" rel="stylesheet">
-
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Govind Raj – Cloud Solution Architect</title>
+<meta name="description" content="Cloud Solution Architect with 18+ years across telecom, e-commerce and media. Former AWS Senior Technical Account Manager. Based in Dubai.">
+<meta property="og:title" content="Govind Raj – Cloud Solution Architect">
+<meta property="og:description" content="Cloud platforms that stay up and cost less. Former AWS Senior TAM, based in Dubai.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700&family=IBM+Plex+Sans:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#eef2f5; --surface:#ffffff; --ink:#14263b; --muted:#51647a; --line:#cfd9e2; --accent:#0b6f78; --accent-ink:#ffffff;
+  --head:"Bricolage Grotesque","Helvetica Neue",Arial,sans-serif;
+  --body:"IBM Plex Sans","Helvetica Neue",Arial,sans-serif;
+  box-sizing:border-box;
+  padding-top:env(safe-area-inset-top,0px);
+  padding-bottom:env(safe-area-inset-bottom,0px);
+  color-scheme:light;
+}
+@media (prefers-color-scheme:dark){
+  :root:not([data-theme="light"]){--bg:#0f1a28;--surface:#16263a;--ink:#e6edf4;--muted:#9fb0c2;--line:#2a3d54;--accent:#4fc3cc;--accent-ink:#0f1a28;color-scheme:dark}
+}
+:root[data-theme="dark"]{--bg:#0f1a28;--surface:#16263a;--ink:#e6edf4;--muted:#9fb0c2;--line:#2a3d54;--accent:#4fc3cc;--accent-ink:#0f1a28;color-scheme:dark}
+html{scroll-padding-top:env(safe-area-inset-top,0px);scroll-behavior:smooth}
+*,*::before,*::after{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font:400 1.0625rem/1.65 var(--body)}
+a{color:var(--accent)}
+a:focus-visible,button:focus-visible{outline:3px solid var(--accent);outline-offset:3px;border-radius:4px}
+.wrap{max-width:62rem;margin:0 auto;padding:0 1.25rem}
+header.top{display:flex;justify-content:space-between;align-items:center;padding:1.25rem 0;gap:1rem;flex-wrap:wrap}
+header.top .name{font:700 1.1rem var(--head);text-decoration:none;color:var(--ink)}
+nav{display:flex;gap:1.25rem;flex-wrap:wrap;align-items:center}
+nav a{color:var(--muted);text-decoration:none;font-size:.95rem}
+nav a:hover{color:var(--ink);text-decoration:underline}
+#theme{background:none;border:1px solid var(--line);color:var(--muted);border-radius:999px;padding:.2rem .7rem;font:inherit;font-size:.85rem;cursor:pointer}
+.hero{padding:4rem 0 3rem}
+h1{font:700 clamp(2.4rem,7vw,4.6rem)/1.04 var(--head);letter-spacing:-.025em;margin:0 0 1.25rem;max-width:16ch}
+.lede{font-size:1.2rem;max-width:44rem;color:var(--muted);margin:0 0 1.75rem}
+.lede strong{color:var(--ink);font-weight:500}
+.cta{display:flex;gap:.75rem;flex-wrap:wrap}
+.btn{display:inline-block;padding:.7rem 1.2rem;border-radius:.5rem;text-decoration:none;font-weight:500;border:1px solid var(--accent)}
+.btn.primary{background:var(--accent);color:var(--accent-ink)}
+.btn.ghost{color:var(--accent)}
+.facts{display:grid;grid-template-columns:repeat(auto-fit,minmax(14rem,1fr));gap:0;margin:3rem 0 0;border-top:1px solid var(--line)}
+.facts div{padding:1.1rem 1.25rem 1.1rem 0;border-bottom:1px solid var(--line)}
+.facts dt{font:700 1.5rem var(--head);margin:0}
+.facts dd{margin:.15rem 0 0;color:var(--muted);font-size:.95rem}
+section{padding:3rem 0}
+h2{font:700 1.8rem/1.2 var(--head);letter-spacing:-.015em;margin:0 0 1.5rem}
+h3{font:700 1.2rem/1.3 var(--head);margin:0 0 .35rem}
+.work{display:grid;grid-template-columns:repeat(auto-fit,minmax(17rem,1fr));gap:1.25rem}
+.work article{background:var(--surface);border:1px solid var(--line);border-left:4px solid var(--accent);padding:1.4rem;border-radius:.25rem .6rem .6rem .25rem}
+.work p{margin:.4rem 0 0;color:var(--muted)}
+.work .tag{font-size:.9rem;color:var(--ink);font-weight:500;margin-top:.8rem}
+.cols{display:grid;grid-template-columns:repeat(auto-fit,minmax(16rem,1fr));gap:2rem}
+.cols ul{margin:0;padding-left:1.1rem}
+.cols li{margin:.3rem 0}
+.timeline{list-style:none;margin:0;padding:0;border-left:2px solid var(--line)}
+.timeline li{position:relative;padding:0 0 2rem 1.75rem}
+.timeline li::before{content:"";position:absolute;left:-.55rem;top:.55rem;width:.9rem;height:.9rem;border-radius:50%;background:var(--bg);border:3px solid var(--accent)}
+.timeline li{display:grid;grid-template-columns:3.5rem 1fr;column-gap:3rem;align-items:start}
+@media (max-width:600px){.timeline li{column-gap:1.25rem}}
+.logo{position:relative;width:3.5rem;height:3.5rem;border-radius:.6rem;background:#fff;border:1px solid var(--line);display:grid;place-items:center;font:700 .85rem var(--head);color:#51647a;overflow:hidden}
+.logo img{position:absolute;inset:0;width:100%;height:100%;object-fit:contain;padding:.4rem;background:#fff}
+.timeline .when{color:var(--muted);font-size:.92rem}
+.timeline .org{font-weight:500}
+.timeline p{margin:.4rem 0 0;max-width:46rem}
+.older{color:var(--muted);max-width:46rem}
+.pill{display:flex;flex-wrap:wrap;gap:.5rem;padding:0;margin:0;list-style:none}
+.pill li{border:1px solid var(--line);background:var(--surface);padding:.3rem .8rem;border-radius:999px;font-size:.95rem}
+footer{border-top:1px solid var(--line);padding:2.5rem 0 3rem;color:var(--muted)}
+footer .big{font:700 1.6rem var(--head);color:var(--ink);margin:0 0 .5rem}
+.about{max-width:44rem}
+.portrait{position:relative;width:12rem;aspect-ratio:1;border-radius:50%;overflow:hidden;background:var(--surface);border:1px solid var(--line);display:grid;place-items:center;font:700 3rem var(--head);color:var(--accent)}
+.portrait img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.about p{margin:0 0 1rem;max-width:42rem}
+@media (max-width:600px){.about{grid-template-columns:1fr;gap:1.5rem}.portrait{width:9rem}}
+.hero{background:repeating-linear-gradient(0deg,rgba(255,255,255,.045) 0 1px,transparent 1px 32px),repeating-linear-gradient(90deg,rgba(255,255,255,.045) 0 1px,transparent 1px 32px),linear-gradient(135deg,#0f2a44 0%,#0c4a57 100%);color:#fff;border-radius:1rem;padding:2.5rem;margin:.5rem 0 0}
+.hero-top{display:flex;gap:2rem;align-items:center;justify-content:space-between}
+.hero-text{flex:1;min-width:0}
+.hero h1{font-size:clamp(2.2rem,6vw,3.6rem);max-width:none;color:#fff;margin:0 0 .3rem}
+.role{font:500 1.3rem var(--head);color:#7fe0e8;margin:0 0 .25rem}
+.tagline{font-size:1.05rem;margin:0 0 1rem;color:#fff}
+.hero .lede{color:#cfe0ee;font-size:1.05rem;margin-bottom:1.5rem}
+.hero .lede strong{color:#fff}
+.hero .btn.primary{background:#fff;color:#0f2a44;border-color:#fff}
+.hero .btn.ghost{color:#fff;border-color:rgba(255,255,255,.5)}
+.hero a:focus-visible{outline-color:#fff}
+.avatar{position:relative;flex:none;width:11rem;aspect-ratio:1;border-radius:50%;overflow:hidden;border:3px solid rgba(255,255,255,.35);background:#16384f;display:grid;place-items:center;font:700 3rem var(--head);color:#7fe0e8}
+.avatar img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.hero .facts{margin-top:2rem;border-top-color:rgba(255,255,255,.2)}
+.hero .facts div{border-bottom:0;padding:.9rem 1rem .2rem 0}
+.hero .facts dt{color:#fff;font-size:1.3rem}
+.hero .facts dd{color:#b8cde0;font-size:.9rem}
+.chips{display:flex;flex-wrap:wrap;gap:.5rem;list-style:none;padding:0;margin:1.25rem 0 0}
+.chips li{border:1px solid rgba(255,255,255,.28);background:rgba(255,255,255,.1);padding:.2rem .75rem;border-radius:999px;font-size:.9rem}
+.chips li.cert{border-color:#7fe0e8;color:#7fe0e8;background:transparent}
+.path{list-style:none;margin:1.5rem 0 0;padding:1.25rem 0 0;border-top:1px solid rgba(255,255,255,.2);display:grid;grid-template-columns:repeat(auto-fit,minmax(9.5rem,1fr));gap:1rem}
+.path li{font-size:.9rem;color:#cfe0ee;position:relative;padding-top:.9rem}
+.path li::before{content:"";position:absolute;top:0;left:0;width:.55rem;height:.55rem;border-radius:50%;background:#7fe0e8}
+.flag.in{background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 20'%3E%3Crect width='30' height='20' fill='%23fff'/%3E%3Crect width='30' height='6.67' fill='%23FF9933'/%3E%3Crect y='13.33' width='30' height='6.67' fill='%23138808'/%3E%3Ccircle cx='15' cy='10' r='2.6' fill='none' stroke='%23000080' stroke-width='.6'/%3E%3C/svg%3E")}
+.flag.ae{background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 20'%3E%3Crect width='30' height='6.67' fill='%2300732F'/%3E%3Crect y='6.67' width='30' height='6.67' fill='%23fff'/%3E%3Crect y='13.33' width='30' height='6.67' fill='%23000'/%3E%3Crect width='8' height='20' fill='%23CE1126'/%3E%3C/svg%3E")}
+.flag.uk{background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 60 30'%3E%3Crect width='60' height='30' fill='%23012169'/%3E%3Cpath d='M0,0 L60,30 M60,0 L0,30' stroke='%23fff' stroke-width='6'/%3E%3Cpath d='M0,0 L60,30 M60,0 L0,30' stroke='%23C8102E' stroke-width='2.5'/%3E%3Cpath d='M30,0 V30 M0,15 H60' stroke='%23fff' stroke-width='10'/%3E%3Cpath d='M30,0 V30 M0,15 H60' stroke='%23C8102E' stroke-width='6'/%3E%3C/svg%3E")}
+.flag{display:inline-block;width:1.45rem;height:.97rem;border-radius:2px;vertical-align:-.1em;margin-left:.45rem;background-size:cover;background-position:center;box-shadow:0 0 0 1px rgba(255,255,255,.35)}
+.path b{display:block;color:#fff;font:700 .95rem var(--head)}
+@media (max-width:640px){.hero{padding:1.5rem}.hero-top{flex-direction:column;align-items:flex-start}.avatar{order:-1;width:8rem}}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+</style>
 </head>
-
 <body>
+<div class="wrap">
+  <header class="top">
+    <a class="name" href="#top">Govind Raj</a>
+    <nav aria-label="Main">
+      <a href="#about">About</a>
+      <a href="#work">Work</a>
+      <a href="#expertise">Expertise</a>
+      <a href="#experience">Experience</a>
+      <a href="#contact">Contact</a>
+      <button id="theme" type="button" aria-label="Toggle dark mode">Theme</button>
+    </nav>
+  </header>
 
-  <!-- ======= Mobile nav toggle button ======= -->
-  <i class="bi bi-list mobile-nav-toggle d-xl-none"></i>
-
-  <!-- ======= Header ======= -->
-  <header id="header">
-    <div class="d-flex flex-column">
-
-      <div class="profile">
-        <img src="assets/img/profile-img.jpeg" alt="" class="img-fluid rounded-circle">
-        <h1 class="text-light"><a href="index.html">Govind Raj</a></h1>
-        <div class="social-links mt-3 text-center">
-          <a href="https://twitter.com/govindcnd" class="twitter"><i class="bx bxl-twitter"></i></a>
-          <a href="https://github.com/govindcnd" class="github"><i class="bx bxl-github"></i></a>
-          <a href="https://www.linkedin.com/in/sagovindraj/" class="linkedin"><i class="bx bxl-linkedin"></i></a>
-        </div>
+  <main id="top">
+    <div class="hero">
+      <div class="hero-top"><div class="hero-text"><h1>Govind Raj</h1><p class="role">Cloud Solution Architect</p><p class="tagline">Cloud platforms that stay up and cost less.</p>
+      <p class="lede">I’m a Cloud Solution Architect in Dubai with 18+ years across telecom, e-commerce and media. I was a <strong>Senior Technical Account Manager at AWS</strong>, advising C-level teams on architecture, resilience and cost, and I’ve led migration, DevOps and FinOps work across AWS and Huawei Cloud.</p>
+      <div class="cta">
+        <a class="btn primary" href="mailto:govind.cnd@gmail.com">Email me</a>
+        <a class="btn ghost" href="https://www.linkedin.com/in/sagovindraj/">LinkedIn</a>
+        <a class="btn ghost" href="assets/GovindRaj-Resume.pdf">Download résumé (PDF)</a>
       </div>
-
-      <nav id="navbar" class="nav-menu navbar">
-        <ul>
-          <li><a href="#hero" class="nav-link scrollto active"><i class="bx bx-home"></i> <span>Home</span></a></li>
-          <li><a href="#about" class="nav-link scrollto"><i class="bx bx-user"></i> <span>About</span></a></li>
-          <li><a href="#Professional Career" class="nav-link scrollto"><i class="bx bx-file-blank"></i> <span>Professional Career</span></a></li>
-          <li><a href="#contact" class="nav-link scrollto"><i class="bx bx-envelope"></i> <span>Contact</span></a></li>
-        </ul>
-      </nav><!-- .nav-menu -->
+      </div>
+      <div class="avatar">GR<img id="pic" src="assets/govindraj.jpg" alt="Portrait of Govind Raj" width="176" height="176"></div></div>
+      <dl class="facts">
+        <div><dt>$6M a year</dt><dd>Savings identified for unique AWS customer through rightsizing and re-architecture</dd></div>
+        <div><dt>20+ reviews</dt><dd>Well-Architected reviews and modernisation workshops run for Engineers & C-level stakeholders</dd></div>
+        <div><dt>~$110M ARR</dt><dd>Highest Size of the AWS estate I engaged </dd></div>
+        <div><dt>3 clouds</dt><dd>AWS,GCP and Huawei Cloud, governed under one FinOps framework</dd></div>
+      </dl>
+      <ul class="chips" aria-label="Skills and certifications">
+        <li>AWS</li><li>Huawei Cloud</li><li>Kubernetes</li><li>FinOps</li><li>DevOps and CI/CD</li><li>Migration and modernisation</li><li>Resilience and DR</li><li>Well-Architected reviews</li>
+        <li class="cert">AWS Solutions Architect</li><li class="cert">AWS SysOps</li><li class="cert">AWS Security Specialty</li><li class="cert">CKA</li><li class="cert">FinOps Practitioner</li>
+      </ul>
+      <ol class="path" aria-label="Career path">
+        <li><b>2008–2010<i class="flag in" role="img" aria-label="India"></i></b>Freelance systems engineering</li>
+        <li><b>2010–2015<i class="flag in" role="img" aria-label="India"></i></b>Cloud and DevOps at QBurst and UST Global</li>
+        <li><b>2015–2016<i class="flag ae" role="img" aria-label="United Arab Emirates"></i></b>Cloud and DevOps at Citruss TV</li>
+        <li><b>2016–2022<i class="flag ae" role="img" aria-label="United Arab Emirates"></i></b>Intigral, DevOps and cloud infrastructure</li>
+        <li><b>2022–2024<i class="flag uk" role="img" aria-label="United Kingdom"></i></b>AWS, Senior TAM in London</li>
+        <li><b>2024–2026<i class="flag ae" role="img" aria-label="United Arab Emirates"></i></b>STC, Senior Cloud Architect (contract consultant)</li>
+      </ol>
     </div>
-  </header><!-- End Header -->
 
-  <!-- ======= Hero Section ======= -->
-  <section id="hero" class="d-flex flex-column justify-content-center align-items-center">
-    <div class="hero-container" data-aos="fade-in">
-      <h1>Govind Raj</h1>
-<p>
-  <span class="typed" data-typed-items="Cloud Architect (AWS), DevOps & Platform Engineering Leader, Cloud Migration & Cost Optimization Specialist"></span>
-</p>
-<p class="mt-3">
-  I design scalable, resilient, and cost-efficient cloud platforms on AWS for high-growth organizations.
-</p>
-
-    </div>
-  </section><!-- End Hero -->
-
-  <main id="main">
-
-    <!-- ======= About Section ======= -->
-    <section id="about" class="about">
-      <div class="container">
-
-        <div class="section-title">
-          <h2>About</h2>
-            <p>
-Cloud Architect with 16+ years of experience designing and delivering scalable, highly available infrastructure across AWS environments. I specialize in cloud migrations, DevOps transformations, and building resilient platforms using modern cloud-native technologies.
-
-Since launching my first AWS EC2 instance in 2010, I have led 50+ cloud migration and modernization initiatives across industries including Media, FinTech, E-Commerce, and Analytics. My work focuses on enabling organizations to scale efficiently, improve reliability, and optimize cloud costs.
-
-I have worked with global clients across North America, Europe, and the Middle East, partnering with engineering teams and business leaders to deliver production-grade cloud solutions.
-</p>
+    <section id="about" aria-labelledby="a-h">
+      <h2 id="a-h">About</h2>
+      <div class="about">
+        
+        <div>
+          <p>I’m a Cloud Solution Architect based in Dubai, with 18 years of experience across telecom, e-commerce and media. I began in 2008 as a systems engineer and freelancer, setting up servers, deploying applications and troubleshooting for clients. That hands-on start still shapes how I work: I want to understand how a platform behaves in production, not just how it looks on a diagram.</p>
+          <p>Over the following years I moved through cloud and DevOps roles at QBurst Technologies, UST Global and Citruss TV, then joined Intigral in Dubai in 2016. In six years there I led infrastructure, automation and DevOps work for media platforms: moving workloads toward cloud, improving CI/CD, and strengthening disaster recovery and reliability.</p>
+          <p>In 2022 I joined Amazon Web Services in London as a Senior Technical Account Manager for a strategic enterprise customer. The role was part architect, part trusted advisor. I ran more than 20 Well-Architected reviews and modernisation workshops, worked with engineering teams and C-level leaders, and led a cost optimisation programme that identified $6M in annual savings through rightsizing and architecture re-engineering. I also coordinated AWS specialists and service teams to unblock large-scale initiatives.</p>
+          <p>I returned to Dubai in 2024 as a Senior Cloud Infrastructure Architect, working as a contract consultant for STC and Intigral until mid-2026. I led architecture for platform modernisation and migration across AWS and Huawei Cloud, and designed a multi-cloud FinOps governance framework that gave teams clear cost visibility across multi-million dollar infrastructure budgets. I also ran architecture reviews and proofs of concept to support technical decisions.</p>
+          <p>What I care about most is the point where architecture meets the business. A good design should be resilient, secure and affordable enough that the people paying for it can see the value, and I try to make those trade-offs visible to engineers and executives alike. My work leans on Well-Architected thinking, FinOps discipline and plain communication, and I back it with AWS certifications in Solutions Architecture, SysOps and Security, plus the Certified Kubernetes Administrator, FinOps Practitioner and Scrum credentials.</p>
+          <p>Outside client work, I volunteer with students as an Industry Connect Member for the Computer Science department at BITS Pilani Dubai Campus and as an Industry Expert for the College of Business Information Systems at University of Umm Al Quwain. As part of this volunteering, I deliver case studies on technology topics such as cloud and IT project management, drawing on the kind of problems I work on day to day.</p>
         </div>
-
-        <div class="row">
-          <div class="col-lg-4" data-aos="fade-right">
-            <img src="assets/img/profile-img.jpeg" class="img-fluid" alt="">
-          </div>
-          <div class="col-lg-8 pt-4 pt-lg-0 content" data-aos="fade-left">
-            <h3>Cloud Architect | AWS | Kubernetes | DevOps</h3>
-<p class="fst-italic">
-  AWS Certified Solutions Architect & Certified Kubernetes Administrator with deep expertise in cloud-native systems, automation, and platform engineering.
-</p>
-            <div class="row">
-              <div class="col-lg-6">
-                <ul>
-                  <li><i class="bi bi-chevron-right"></i> <strong>Website:</strong> <span>www.govindraj.me</span></li>
-                <!-- =======   <li><i class="bi bi-chevron-right"></i> <strong>Phone:</strong> <span>+971 55 227 2029</span></li>  ======= -->
-                  <li><i class="bi bi-chevron-right"></i> <strong>City:</strong> <span>Dubai, United Arab Emirates</span></li>
-                </ul>
-              </div>
-              <div class="col-lg-6">
-                <ul>
-                  <li><i class="bi bi-chevron-right"></i> <strong>Degree:</strong> <span>Information Technology</span></li>
-                  <li><i class="bi bi-chevron-right"></i> <strong>Email:</strong> <span>govind.cnd@gmail.com</span></li>
-                </ul>
-              </div>
-            </div>
-            <p>
-I work across architecture design, cloud automation, CI/CD pipelines, and production operations—ensuring systems are scalable, secure, and cost-optimized.            </p>
-          </div>
-        </div>
-
       </div>
-    </section><!-- End About Section -->
+    </section>
 
-    <!-- ======= Facts Section ======= -->
-    <section id="facts" class="facts">
-      <div class="container">
-
-        <div class="section-title">
-          <h2>Facts</h2>
-          <p>Few Facts about Tenure and Skills</p>
-        </div>
-
-        <div class="row no-gutters">
-
-          <div class="col-lg-3 col-md-6 d-md-flex align-items-md-stretch" data-aos="fade-up">
-            <div class="count-box">
-              <i class="bi bi-emoji-smile"></i>
-              <span data-purecounter-start="0" data-purecounter-end="16" data-purecounter-duration="1000" class="purecounter"></span>
-                <p><strong>16+ Years Experience</strong> in Systems Engineering, DevOps, and Cloud Architecture</p>
-            </div>
-          </div>
-
-          <div class="col-lg-3 col-md-6 d-md-flex align-items-md-stretch" data-aos="fade-up" data-aos-delay="300">
-            <div class="count-box">
-              <i class="bi bi-people"></i>
-              <span data-purecounter-start="0" data-purecounter-end="440" data-purecounter-duration="1" class="purecounter"></span>
-                <p><strong>High-Scale Systems</strong> Designed and operated platforms handling up to 400 TPS</p>
-            </div>
-          </div>
-
-          <div class="col-lg-3 col-md-6 d-md-flex align-items-md-stretch" data-aos="fade-up" data-aos-delay="100">
-            <div class="count-box">
-              <i class="bi bi-journal-richtext"></i>
-              <span data-purecounter-start="0" data-purecounter-end="6" data-purecounter-duration="1" class="purecounter"></span>
-                <p><strong>Industry Experience</strong> Media, FinTech, E-Commerce, Marketing, and Analytics platforms</p>
-            </div>
-          </div>
-
-          <div class="col-lg-3 col-md-6 d-md-flex align-items-md-stretch" data-aos="fade-up" data-aos-delay="200">
-            <div class="count-box">
-              <i class="bi bi-headset"></i>
-              <span data-purecounter-start="0" data-purecounter-end="4" data-purecounter-duration="1" class="purecounter"></span>
-                <p><strong>Greenfield Projects</strong> Built end-to-end cloud platforms including CI/CD, monitoring, and disaster recovery</p>
-            </div>
-          </div>
-
-          <div class="col-lg-3 col-md-6 d-md-flex align-items-md-stretch" data-aos="fade-up" data-aos-delay="300">
-            <div class="count-box">
-              <i class="bi bi-people"></i>
-              <span data-purecounter-start="0" data-purecounter-end="3" data-purecounter-duration="1" class="purecounter"></span>
-                 <p><strong>Certifications</strong> AWS, CNCF (Kubernetes), and Agile (Scrum Alliance)</p>
-            </div>
-          </div>
-
-        </div>
-
+    <section id="work" aria-labelledby="w-h">
+      <h2 id="w-h">Selected work</h2>
+      <div class="work">
+        <article>
+          <h3>Multi-cloud FinOps framework</h3>
+          <p>Designed and ran a governance framework across AWS and Huawei Cloud for STC / Intigral. It introduced cost visibility metrics that helped optimise multi-million dollar infrastructure budgets.</p>
+          <p class="tag">Role: architect, 2024–2026</p>
+        </article>
+        <article>
+          <h3>$6M in annual savings, no guesswork</h3>
+          <p>Led a cost optimisation initiative for a strategic AWS enterprise customer. Rightsizing and architecture re-engineering found $6M a year without compromising reliability.</p>
+          <p class="tag">Role: Senior TAM, AWS, 2022–2024</p>
+        </article>
+        <article>
+          <h3>Platform modernisation and migration</h3>
+          <p>Architecture, migration planning and resilience improvements for cloud platforms at STC / Intigral, backed by proof-of-concept builds to support technical decisions.</p>
+          <p class="tag">Role: Senior Cloud Infrastructure Architect</p>
+        </article>
       </div>
-    </section><!-- End Facts Section -->
+    </section>
 
-    <!-- ======= Skills Section ======= -->
-    <section id="skills" class="skills section-bg">
-      <div class="container">
-
-        <div class="section-title">
-          <h2>Key Skills</h2>
-          <p>My Keys Skills or Areas of interest </p>
+    <section id="expertise" aria-labelledby="e-h">
+      <h2 id="e-h">Expertise</h2>
+      <div class="cols">
+        <div>
+          <h3>Architecture</h3>
+          <ul>
+            <li>Cloud solution and platform architecture</li>
+            <li>AWS migration and modernisation</li>
+            <li>High availability and disaster recovery</li>
+            <li>Architecture reviews and governance</li>
+          </ul>
         </div>
-
-        <div class="row skills-content">
-
-          <div class="col-lg-6" data-aos="fade-up">
-
-            <div class="progress">
-              <span class="skill">AWS <i class="val">100%</i></span>
-              <div class="progress-bar-wrap">
-                <div class="progress-bar" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
-              </div>
-            </div>
-
-            <div class="progress">
-              <span class="skill">K8s <i class="val">90%</i></span>
-              <div class="progress-bar-wrap">
-                <div class="progress-bar" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100"></div>
-              </div>
-            </div>
-
-            <div class="progress">
-              <span class="skill">CI/CD with Jenkins <i class="val">75%</i></span>
-              <div class="progress-bar-wrap">
-                <div class="progress-bar" role="progressbar" aria-valuenow="95" aria-valuemin="0" aria-valuemax="100"></div>
-              </div>
-            </div>
-            <div class="progress">
-              <span class="skill">Cloud Security and Cloud Migrations <i class="val">90%</i></span>
-              <div class="progress-bar-wrap">
-                <div class="progress-bar" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100"></div>
-              </div>
-            </div>
-
-          </div>
-
-          <div class="col-lg-6" data-aos="fade-up" data-aos-delay="100">
-
-            <div class="progress">
-              <span class="skill">Ansible, CloudFormation, CodeDeploy <i class="val">80%</i></span>
-              <div class="progress-bar-wrap">
-                <div class="progress-bar" role="progressbar" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100"></div>
-              </div>
-            </div>
-
-            <div class="progress">
-              <span class="skill">Docker <i class="val">90%</i></span>
-              <div class="progress-bar-wrap">
-                <div class="progress-bar" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100"></div>
-              </div>
-            </div>
-
-            <div class="progress">
-              <span class="skill">ELK <i class="val">55%</i></span>
-              <div class="progress-bar-wrap">
-                <div class="progress-bar" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
-              </div>
-            </div>
-            <div class="progress">
-              <span class="skill">Linux <i class="val">85%</i></span>
-              <div class="progress-bar-wrap">
-                <div class="progress-bar" role="progressbar" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100"></div>
-              </div>
-            </div>
-            
-          </div>
-
+        <div>
+          <h3>Operations and cost</h3>
+          <ul>
+            <li>FinOps and cloud cost optimisation</li>
+            <li>DevOps transformation, CI/CD, Kubernetes</li>
+            <li>Cloud operations, reliability and risk reduction</li>
+            <li>CCOE and digital transformation</li>
+          </ul>
         </div>
-
+        <div>
+          <h3>Advisory</h3>
+          <ul>
+            <li>Cloud adoption strategy</li>
+            <li>Executive stakeholder management</li>
+            <li>Proof-of-concept design</li>
+            <li>Technical enablement</li>
+          </ul>
+        </div>
       </div>
-    </section><!-- End Skills Section -->
+      <h3 style="margin-top:2rem">Certifications</h3>
+      <ul class="pill">
+        <li>AWS Solutions Architect – Associate</li>
+        <li>AWS SysOps Administrator – Associate</li>
+        <li>AWS Security – Specialty</li>
+        <li>Certified Kubernetes Administrator</li>
+        <li>FinOps Practitioner</li>
+        <li>Scrum</li>
+      </ul>
+    </section>
 
-    <!-- ======= Resume Section ======= -->
-    <section id="Professional Career" class="Professional Career">
-      <div class="container">
-
-        <div class="section-title">
-          <h2>Resume</h2>
-          <p>I am a Cloud Architect and DevOps leader focused on building scalable, highly available, and automated cloud platforms. My expertise spans cloud migration, infrastructure design, CI/CD implementation, and cost optimization across AWS environments.</p>
-        </div>
-
-        <div class="row">
-          <div class="col-lg-6" data-aos="fade-up">
-            <h3 class="resume-title">Skill Sumary</h3>
-            <div class="resume-item pb-0">
-              <h4>Govind Raj</h4>
-              <p><em>Devops Engineer by profession with 16 years of industry experience </em></p>
-              <ul>
-  <li>16+ years of experience in IT with a strong focus on Cloud Architecture and DevOps.</li>
-  <li>Led 50+ cloud migration and modernization initiatives on AWS.</li>
-  <li>Expert in designing scalable, fault-tolerant, and highly available cloud systems.</li>
-  <li>Strong experience in DevOps transformation and CI/CD implementation.</li>
-  <li>Specialized in cloud cost optimization and FinOps practices.</li>
-  <li>Proven ability to lead architecture discussions with engineering teams and C-level stakeholders.</li>
-  <li>Hands-on experience in Kubernetes, automation, and infrastructure as code.</li>
-  <li>Experienced in building disaster recovery and business continuity solutions.</li>
-</ul>
-            </div>
-
-            <h3 class="resume-title">Education</h3>
-            <div class="resume-item">
-              <h4>Bachelor of Information Technology</h4>
-              <h5>2004 - 2008</h5>
-              <p><em>University of Calicut</em></p>
-              <p>Bachelor of Engineering with Information Technology as Major</p>
-            </div>
-            <div class="resume-item">
-              <h4>Diploma in Electrical and Electronics Engineering</h4>
-              <h5>2001 - 2004</h5>
-              <p><em>Dept of Technical Education</em></p>
-              <p>Diploma in Engineering with Electitcal Engineering as Major</p>
-            </div>
+    <section id="experience" aria-labelledby="x-h">
+      <h2 id="x-h">Experience</h2>
+      <ol class="timeline">
+        <li>
+          <span class="logo">STC<img src="assets/logos/stc.png" alt="Saudi Telecom Company logo" width="56" height="56" loading="lazy"></span>
+          <div>
+          <h3>Senior Cloud Infrastructure Architect</h3>
+          <div class="org">Saudi Telecom Company (STC / Intigral), contract</div>
+          <div class="when">Dubai, Aug 2024 – Jun 2026</div>
+          <p>Led architecture for cloud platform modernisation, migration and resiliency across AWS and Huawei Cloud, and built the multi-cloud FinOps governance framework.</p>
           </div>
-          <div class="col-lg-6" data-aos="fade-up" data-aos-delay="100">
-            <h3 class="resume-title">Professional Experience</h3>
-             <div class="resume-item">
-              <h4>Senior Cloud Architect (Consulting) </h4>
-              <h5>2024 - Present</h5>
-              <p><em>Intigral Middle East, Dubai</em></p>
-              <ul>
-                <li>  Designed and delivered cloud migration strategies for large-scale platforms on AWS.</li>
-                <li>  Improved platform reliability and scalability through optimized cloud architecture.</li>
-                <li>  Led cost optimization initiatives across multi-account AWS environments.</li>
-                <li>  Ensuring Cloud Platform optimization and resiliency. </li>
-                <li>  Design and develop solution on public cloud infrastructure. </li>
-                <li>  PoC and Cloud Migration Solutions. </li
-                <li>  Management of end-to-end cloud environments. </li>
-                <li>  Cost Analysis on multiple public cloud platforms. </li>
-                <li>  Public Cloud Cost optimizations. </li>
-              </ul>
-            </div>
-          <div class="col-lg-6" data-aos="fade-up" data-aos-delay="100">
-            <h3 class="resume-title">Professional Experience</h3>
-             <div class="resume-item">
-              <h4>Senior Technical Account Manager </h4>
-              <h5>2022 - 2024</h5>
-              <p><em>Amazon Web Services, London, UK </em></p>
-              <ul>
-                <li>  Drive our customers’ adoption and use of AWS services. </li>
-                <li>  Provide advocacy and technical guidance to plan and build solutions using best practices. </li>
-                <li>  Proactively keep your customers’ AWS environments operationally healthy. </li>
-                <li>  Advocate to overcome cloud adoption blockers. </li>
-                <li>  Improve customer capabilities by running workshops and architecture reviews. </li>
-                <li>  Ensure customers’ AWS environments remain operationally healthy. </li>
-                <li>  Mitigate risks in customer operations plans and product adoption. </li>
-                <li>  Work with customers across all levels from developers through to C-Suite executives. </li>
-                <li>  Conduct regular strategic business review with key decision makers. </li>
-                <li>  Drive Cost Optimization engagements across cloud estates. </li>
-                <li>  Conduct operational reviews. </li>
-              </ul>
-            </div>
-            <div class="resume-item">
-              <h4>Devops Engineer Lead </h4>
-              <h5>2016 - 2022</h5>
-              <p><em>Intigral Middle East, Dubai, UAE </em></p>
-              <ul>
-                <li>End to end Platform management of OTT Backend Service</li>
-              </ul>
-            </div>
-            <div class="resume-item">
-              <h4>Devops Engineer</h4>
-              <h5>2015 - 2016</h5>
-              <p><em>CitrussTV , Dubai, UAE</em></p>
-              <ul>
-                <li>Designed and delivered cloud migration strategies for large-scale platforms on AWS.</li>
-                <li>Improved platform reliability and scalability through optimized cloud architecture.</li>
-                <li>Led cost optimization initiatives across multi-account AWS environments.</li>
-                <li>Management of AWS components</li>
-                <li>Implementing the solution for platform consistancy </li>
-                <li>Back and Recovery planning and implementation</li>
-              </ul>
-            </div>
-            <div class="resume-item">
-              <h4>Devops Engineer / System Analyst</h4>
-              <h5>2014 - 2015</h5>
-              <p><em>UST Global Inc, India</em></p>
-              <ul>
-                <li>Management of AWS components</li>
-                <li>Implementing the solution for platform consistancy </li>
-                <li>CI/CD implementation for automation of build and release </li>
-                <li>Automation of Operation actitivies to improve TAT</li>
-              </ul>
-            </div>
-            <div class="resume-item">
-              <h4>Devops Engineer/ System Administrator</h4>
-              <h5>2010 - 2014</h5>
-              <p><em>QBurst Technologies, India</em></p>
-              <ul>
-                <li>Management of AWS components</li>
-                <li>Developer Support on Development Stages</li>
-                <li>Provisioning services and APIs on multiple Projects and Account </li>
-                <li>CI/CD implementation for automation of build and release</li>
-                <li>Implementation of Version Control, Infra Monitoring , Back up and Restore</li>
-                <li>Automation of Operation actitivies and On Call Rotation Support</li>
-              </ul>
-            </div>
-            <div class="resume-item">
-              <h4>Founder / System Engineer</h4>
-              <h5>2008 - 2010</h5>
-              <p><em>Maguzlabs Technology Services, India</em></p>
-              <ul>
-                <li>End to End of all Client handling</li>
-                <li>Sourcing and Delivery</li>
-                <li>Team Management</li>
-                <li>Infra and Hosting Management</li>
-              </ul>
-            </div>
+        </li>
+        <li>
+          <span class="logo">AWS<img src="assets/logos/aws.png" alt="Amazon Web Services logo" width="56" height="56" loading="lazy"></span>
+          <div>
+          <h3>Senior Technical Account Manager, Strategic</h3>
+          <div class="org">Amazon Web Services</div>
+          <div class="when">London, Jul 2022 – Aug 2024</div>
+          <p>Trusted advisor to C-level stakeholders of a strategic customer. Ran Well-Architected reviews, delivered the $6M savings programme and coordinated AWS specialists to unblock large-scale initiatives.</p>
           </div>
-        </div>
+        </li>
+        <li>
+          <span class="logo">INT<img src="assets/logos/intigral.png" alt="Intigral logo" width="56" height="56" loading="lazy"></span>
+          <div>
+          <h3>Infrastructure Expert, DevOps and Cloud</h3>
+          <div class="org">Intigral Middle East (an STC company)</div>
+          <div class="when">Dubai, May 2016 – Apr 2022</div>
+          <p>Led cloud, automation and DevOps transformation for media platforms: CI/CD, migration planning, disaster recovery readiness and reliability.</p>
+          </div>
+        </li>
+      </ol>
+      <p class="older">Earlier roles: DevOps Engineer at Citruss TV (2015–2016), System Analyst at UST Global (2014–2015), System Administrator at QBurst Technologies (2010–2014), and founder of Maguzlabs, a freelance systems engineering practice (2008–2010). B.Tech in Information Technology, University of Calicut.</p>
+    </section>
 
+    <section aria-labelledby="c-h">
+      <h2 id="c-h">Community</h2>
+      <div><h3></h3><p>I deliver sessions on Cloud Technologies & case studies to Graduate students in various Universities in UAE .</p></div>
+      <div class="cols">
+        <div><h3>Industry Connect Member</h3><p>Computer Science Department, BITS Pilani Dubai Campus.</p></div>
+        <div><h3>Industry Expert</h3><p>College of Business Information Systems, University of Umm Al Quwain.</p></div>
       </div>
-    </section><!-- End Resume Section -->
+    </section>
+  </main>
 
-    <!-- ======= Contact Section ======= -->
-    <section id="contact" class="contact">
-      <div class="container">
-
-        <div class="section-title">
-          <h2>Contact</h2>
-<p>Interested in cloud architecture, migration, or optimization? Let’s connect.</p>
-        </div>
-
-        <div class="row" data-aos="fade-in">
-
-          <div class="col-lg-5 d-flex align-items-stretch">
-            <div class="info">
-              <div class="address">
-                <i class="bi bi-geo-alt"></i>
-                <h4>Location:</h4>
-                <p>London, UK</p>
-              </div>
-
-              <div class="email">
-                <i class="bi bi-envelope"></i>
-                <h4>Email:</h4>
-                <p>govind.cnd@gmail.com</p>
-              </div>
-              <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d28904.958406227397!2d55.14177538068561!3d25.097805677574332!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3e5f6b6915f1434d%3A0x316198ea6ee3651e!2sAl%20Sufouh%20-%20Dubai%20Internet%20City%20-%20Dubai!5e0!3m2!1sen!2sae!4v1777535849099!5m2!1sen!2sae" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-             </div>
-
-          </div>
-          </div>
-
-        </div>
-
-      </div>
-    </section><!-- End Contact Section -->
-
-  </main><!-- End #main -->
-
-  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
-
-  <!-- Vendor JS Files -->
-  <script src="assets/vendor/aos/aos.js"></script>
-  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
-  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
-  <script src="assets/vendor/php-email-form/validate.js"></script>
-  <script src="assets/vendor/purecounter/purecounter.js"></script>
-  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
-  <script src="assets/vendor/typed.js/typed.min.js"></script>
-  <script src="assets/vendor/waypoints/noframework.waypoints.js"></script>
-
-  <!-- Template Main JS File -->
-  <script src="assets/js/main.js"></script>
-
+  <footer id="contact">
+    <p class="big">Let’s talk about your cloud platform.</p>
+    <p>Email <a href="mailto:govind.cnd@gmail.com">govind.cnd@gmail.com</a> or connect on <a href="https://www.linkedin.com/in/sagovindraj/">LinkedIn</a>. Based in Dubai, UAE.</p>
+  </footer>
+</div>
+<script>
+(function(){
+  var root=document.documentElement,btn=document.getElementById('theme');
+  var pic=document.getElementById('pic');
+  if(pic){pic.addEventListener('error',function(){pic.remove();});}
+  document.querySelectorAll('.logo img').forEach(function(i){i.addEventListener('error',function(){i.remove();});});
+  try{var s=localStorage.getItem('theme');if(s)root.setAttribute('data-theme',s);}catch(e){}
+  btn.addEventListener('click',function(){
+    var dark=root.getAttribute('data-theme')==='dark'||(!root.getAttribute('data-theme')&&matchMedia('(prefers-color-scheme: dark)').matches);
+    var next=dark?'light':'dark';
+    root.setAttribute('data-theme',next);
+    try{localStorage.setItem('theme',next);}catch(e){}
+  });
+})();
+</script>
 </body>
-
 </html>
